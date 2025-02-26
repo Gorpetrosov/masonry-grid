@@ -1,0 +1,51 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NotFoundPage > should match snapshot 1`] = `
+<div>
+  <div
+    class="container-404"
+  >
+    <h1>
+      404 Not Found
+    </h1>
+    <p
+      class="zoom-area"
+    >
+      Uh oh! Looks like you got lost.
+    </p>
+    <p
+      class="zoom-area"
+    >
+       Go back to the homepage if you dare!
+    </p>
+    <section
+      class="error-container"
+    >
+      <span>
+        4
+      </span>
+      <span>
+        <span
+          class="screen-reader-text"
+        >
+          0
+        </span>
+      </span>
+      <span>
+        4
+      </span>
+    </section>
+    <div
+      class="link-container"
+    >
+      <a
+        class="custom-link"
+        data-discover="true"
+        href="/"
+      >
+        GO TO MAIN PAGE
+      </a>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,37 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MainPage > should match snapshot 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <header
+      class="layout-header"
+    >
+      <h1>
+        Welcome Masonry Grid
+      </h1>
+    </header>
+    <div
+      class="layout-main"
+    >
+      <div
+        data-testid="navbar-mock"
+      />
+      <div
+        data-testid="masonry-mock"
+      />
+    </div>
+    <footer
+      class="layout-footer"
+    >
+      <p>
+        © 
+        2025
+         
+        Masonry APP
+      </p>
+    </footer>
+  </div>
+</div>
+`;

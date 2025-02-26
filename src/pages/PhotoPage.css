@@ -1,0 +1,166 @@
+/* PhotoPage.css */
+.cart .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.cart .center {
+    text-align: center;
+}
+
+.cart-wrapper {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cart-image {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 16/9;
+}
+
+.cart-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cart-detail {
+    padding: 0.5rem;
+}
+
+.text-medium {
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.text-base {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 0.75rem;
+}
+
+.cart-detail p {
+    font-size: 0.95rem;
+    color: #718096;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+
+
+.cart-checkout {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* ============ Responsive Breakpoints ============ */
+@media (min-width: 480px) {
+    .cart-image {
+        aspect-ratio: 4/3;
+    }
+
+    .text-medium {
+        font-size: 1.35rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .cart-content {
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+
+    .cart-image {
+        flex: 1 1 60%;
+        aspect-ratio: 16/9;
+    }
+
+    .cart-detail {
+        flex: 1 1 40%;
+        padding: 1rem;
+    }
+
+    .text-medium {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .text-base {
+        font-size: 1.25rem;
+    }
+
+    .cart-detail p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    .cart-wrapper {
+        padding: 2.5rem;
+    }
+
+    .cart-content {
+        gap: 3rem;
+    }
+
+    .text-medium {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .cart-image {
+        flex: 1 1 70%;
+    }
+
+    .cart-detail {
+        flex: 1 1 30%;
+    }
+}
+
+/* Touch devices */
+@media (hover: none) {
+    .cart-image:hover img {
+        transform: none;
+    }
+
+    .custom-link:hover {
+        transform: none;
+        background-color: transparent;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: more) {
+    .cart-wrapper {
+        border: 2px solid #000;
+    }
+
+    .custom-link {
+        text-decoration: underline;
+    }
+}

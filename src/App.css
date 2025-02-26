@@ -1,0 +1,43 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+:root {
+  --primary-color: #282c34;
+  --header-padding: clamp(15px, 2vw, 20px);
+  --footer-padding: clamp(10px, 1.5vw, 15px);
+  --main-padding: clamp(15px, 3vw, 20px);
+  --header-font-size: clamp(1.25rem, 2vw, 1.5rem);
+  --footer-font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+}
+
+a.custom-link, button.custom-link {
+  text-transform: uppercase;
+  font-size: 13px;
+  background-color: #92a4ad;
+  padding: 10px 15px;
+  border-radius: 0;
+  color: #416475;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  line-height: 1.5;
+  text-decoration: none;
+  margin-top: 50px;
+  letter-spacing: 1px;
+  height: auto;
+  border: none;
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
+}
+
+.grid-center-item {
+  justify-self: center;
+  align-self: center;
+  place-self: center;
+}

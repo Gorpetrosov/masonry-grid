@@ -1,0 +1,134 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PhotoPage > should match snapshot when photo exists 1`] = `
+<div>
+  <div
+    data-testid="layout-mock"
+  >
+    <main
+      class="cart main"
+    >
+      <section
+        class="cart container"
+        id="cart"
+      >
+        <h3
+          class="text-medium font-medium center"
+        >
+          Brown Rocks During Golden Hour
+        </h3>
+        <div
+          class="cart-wrapper"
+        >
+          <article
+            class="cart-content"
+          >
+            <div
+              class="cart-image"
+            >
+              <img
+                alt="Brown Rocks During Golden Hour"
+                src="test.jpg"
+              />
+            </div>
+            <div
+              class="cart-detail"
+            >
+              <h3
+                class="text-base font-semi"
+              >
+                Photographer 
+                John Doe
+              </h3>
+              <a
+                class="custom-link"
+                href="https://example.com"
+                target="_blank"
+              >
+                Link to 
+                John Doe
+                's page
+              </a>
+              <p>
+                Original Width: 
+                1920
+                 px
+              </p>
+              <p>
+                Original Height: 
+                1080
+                 px
+              </p>
+            </div>
+          </article>
+        </div>
+        <div
+          class="cart-checkout"
+        >
+          <a
+            class="custom-link"
+            data-discover="true"
+            href="/"
+          >
+            Main Page
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+`;
+
+exports[`PhotoPage > should match snapshot when photo not found 1`] = `
+<div>
+  <div
+    data-testid="layout-mock"
+  >
+    <div
+      class="container-404"
+    >
+      <h1>
+        404 Not Found
+      </h1>
+      <p
+        class="zoom-area"
+      >
+        There is no image with id 123
+      </p>
+      <p
+        class="zoom-area"
+      >
+         Go back to the homepage if you dare!
+      </p>
+      <section
+        class="error-container"
+      >
+        <span>
+          4
+        </span>
+        <span>
+          <span
+            class="screen-reader-text"
+          >
+            0
+          </span>
+        </span>
+        <span>
+          4
+        </span>
+      </section>
+      <div
+        class="link-container"
+      >
+        <a
+          class="custom-link"
+          data-discover="true"
+          href="/"
+        >
+          GO TO MAIN PAGE
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
