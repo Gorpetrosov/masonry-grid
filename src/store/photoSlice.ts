@@ -55,8 +55,8 @@ export const getMorePhotos = createAsyncThunk(
     'photos/getMorePhotos',
     async (params: SearchParams, { rejectWithValue }) => {
         try {
-            const  { query, per_page } = params;
-            const searchParams = { per_page: per_page || config.PAGINATION, query, page: 1};
+            const  { query, per_page, page } = params;
+            const searchParams = { per_page: per_page || config.PAGINATION, query, page};
             if(params.query){
                 return  getPexelData<PexelsApiResponse>(Photo_SubDirectory.SEARCH, searchParams);
             }
@@ -95,7 +95,7 @@ const photoSlice = createSlice({
                 if(state.total_results !== action.payload.total_results) {
                     state.total_results = action.payload.total_results;
                 }
-                state.page = 1;
+                state.page = action.payload.page;
             })
             .addCase(searchPhotos.rejected, (state, action) => {
                 state.loading = false;

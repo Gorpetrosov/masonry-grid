@@ -6,7 +6,7 @@ import {useCallback, useEffect, useRef} from "react";
 
 export interface MasonryProps {
     photos: Photo[];
-    loadMore: () => void;
+    loadMore: (isCurated: boolean) => void;
     hasMore: boolean;
     isLoading: boolean;
 }
@@ -19,7 +19,7 @@ export const Masonry = ({ photos, loadMore, isLoading, hasMore }: MasonryProps) 
     const handleObserver = useCallback((entries: IntersectionObserverEntry[]) => {
         const [target] = entries;
         if (target.isIntersecting && hasMore && !isLoading) {
-            loadMore();
+            loadMore(false);
         }
     }, [hasMore, isLoading, loadMore]);
 
@@ -42,10 +42,8 @@ export const Masonry = ({ photos, loadMore, isLoading, hasMore }: MasonryProps) 
     }, [handleObserver]);
 
     const getNewImages = useCallback(() => {
-        if (hasMore) {
-            loadMore();
-        }
-    }, [hasMore, loadMore])
+        loadMore(true);
+    }, [loadMore])
 
     return (
         <div className="masonry-container">

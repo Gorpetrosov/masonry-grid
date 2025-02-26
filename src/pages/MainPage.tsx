@@ -16,7 +16,7 @@ const MainPage = () => {
 
     useEffect(() => {
         if(!entities.length){
-            dispatch(getMorePhotos({ page }));
+            dispatch(getMorePhotos({ page: 1 }));
         }
     }, []);
 
@@ -29,18 +29,20 @@ const MainPage = () => {
             try {
                 await dispatch(searchPhotos({
                     query,
-                    page,
+                    page: 1,
                 }));
             } finally {
                 setIsSearching(false);
             }
         }, 300),
-        [dispatch, page]
+        [dispatch]
     );
 
-    const getNewImages = useCallback(() => {
-
-        if(currentQuery){
+    const getNewImages = useCallback((isCurated: boolean) => {
+        if(isCurated) {
+            dispatch(getMorePhotos({ page: 1 }));
+            setCurrentQuery('');
+        } else if(currentQuery){
             dispatch(getMorePhotos({query: currentQuery,page: page + 1 }));
         }else {
             dispatch(getMorePhotos({ page: page + 1 }));
