@@ -22,19 +22,6 @@ const MainPage = () => {
     }, []);
 
     useEffect(() => {
-       const previewImageIndex = entities.length - (Number(config.PAGINATION) + 15);
-       if(previewImageIndex > 0) {
-           const previewImageId = entities[previewImageIndex]?.id;
-           const elementId = `masonry_${previewImageId}`;
-           const element = document.getElementById(elementId);
-           if (element) {
-               element.scrollIntoView({ behavior: "smooth", block: "start" });
-           }
-       }
-
-    }, [entities]);
-
-    useEffect(() => {
         setHasMore(total_results - entities.length > 0);
     }, [total_results, entities.length, setHasMore]);
 
@@ -90,7 +77,7 @@ const MainPage = () => {
                     isDisabled={loading || isSearching}
                     onInputUpdate={updateInputValue}
                 />
-                {!loading && !isSearching && entities && (
+                {entities && (
                    <Masonry photos={entities} loadMore={getNewImages} isLoading={loading} hasMore={hasMore} />
                 )}
         </Layout>
