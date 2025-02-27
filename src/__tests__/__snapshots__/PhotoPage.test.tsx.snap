@@ -28,7 +28,7 @@ exports[`PhotoPage > should match snapshot when photo exists 1`] = `
             >
               <img
                 alt="Brown Rocks During Golden Hour"
-                src="test.jpg"
+                src="test-original.jpg"
               />
             </div>
             <div

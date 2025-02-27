@@ -1,7 +1,6 @@
 import { Photo } from "../../interfaces/photo";
 import { Link } from "react-router-dom";
 import "./Masonry.css";
-import config from "../../config";
 import {useCallback, useEffect, useRef} from "react";
 
 export interface MasonryProps {
@@ -53,32 +52,13 @@ export const Masonry = ({ photos, loadMore, isLoading, hasMore }: MasonryProps) 
                 </button>
             ) : (
                 <>
-                <div className="masonry-grid">
+                <div className="masonry">
                     {photos.map((item, index) => (
-                        <Link
-                            className="masonry-link"
-                            key={`${item.id}-${index}`}
-                            to={`/photos/${item.id}`}
-                        >
-                            <div
-                                className="grid-item"
-                                style={{ gridRowEnd: `span ${config.PAGINATION}` }}
-                            >
-                                <img
-                                    src={item.src.original}
-                                    alt={item.alt}
-                                    className="grid-image"
-                                    loading="lazy"
-                                />
-                                <div className="grid-content">
-                                    {item.photographer && (
-                                        <p className="grid-description">
-                                            Photo by {item.photographer}
-                                        </p>
-                                    )}
-                                </div>
-                            </div>
-                        </Link>
+                     <div key={item.id + index} className="masonry-item">
+                         <Link to={`/photos/${item.id}`}>
+                             <img loading="lazy" src={item.src.original} alt={item.alt}/>
+                         </Link>
+                     </div>
                     ))}
                 </div>
                     <div ref={sentinelRef} className="sentinel" />

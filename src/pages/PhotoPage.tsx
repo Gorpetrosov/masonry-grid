@@ -34,7 +34,7 @@ const PhotoPage = () => {
                         <div className="cart-wrapper">
                             <article className="cart-content">
                                 <div className="cart-image">
-                                    <img src={photo.src.tiny} alt={photo.alt} />
+                                    <img src={photo.src.original} alt={photo.alt} />
                                 </div>
                                 <div className="cart-detail">
                                     <h3 className="text-base font-semi">Photographer {photo.photographer}</h3>
