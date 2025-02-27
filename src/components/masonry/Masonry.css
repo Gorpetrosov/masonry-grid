@@ -29,6 +29,7 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     padding: 0;
     position: relative;
+    will-change: transform;
 }
 
 .masonry-item img {
@@ -37,17 +38,17 @@
     -o-object-fit: cover;
     object-fit: cover;
     display: block;
-    -webkit-transition: -webkit-transform 0.2s ease;
-    transition: -webkit-transform 0.2s ease;
-    -o-transition: transform 0.2s ease;
-    transition: transform 0.2s ease;
-    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+    -webkit-transition: -webkit-transform 0.1s ease;
+    transition: -webkit-transform 0.1s ease;
+    -o-transition: transform 0.1s ease;
+    transition: transform 0.1s ease;
+    transition: transform 0.1s ease, -webkit-transform 0.1s ease;
 }
 
 .masonry-item:hover img {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
 }
 
 
@@ -97,6 +98,6 @@
     .masonry {
         -webkit-columns: 4;
         -moz-columns: 4;
-        columns: 4;
+        columns: 5;
     }
 }

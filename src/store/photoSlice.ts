@@ -107,7 +107,7 @@ const photoSlice = createSlice({
             })
             .addCase(getMorePhotos.fulfilled, (state, action: PayloadAction<PexelsApiResponse>) => {
                 state.loading = false;
-                state.entities = action.payload.photos.concat(state.entities);
+                state.entities = state.entities.concat(action.payload.photos);
                 if(state.total_results !== action.payload.total_results) {
                     state.total_results = action.payload.total_results;
                 }

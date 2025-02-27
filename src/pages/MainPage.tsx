@@ -6,6 +6,7 @@ import {useCallback, useEffect, useMemo, useState} from "react";
 import debounce from "lodash.debounce";
 import {getMorePhotos, searchPhotos} from "../store/photoSlice.ts";
 import {Masonry} from "../components/masonry/Masonry.tsx";
+import config from "../config";
 
 const MainPage = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -19,6 +20,20 @@ const MainPage = () => {
             dispatch(getMorePhotos({ page: 1 }));
         }
     }, []);
+
+    useEffect(() => {
+       const previewImageIndex = entities.length - (Number(config.PAGINATION) + 15);
+       if(previewImageIndex > 0) {
+           console.log({previewImageIndex})
+           const previewImageId = entities[previewImageIndex]?.id;
+           const elementId = `masonry_${previewImageId}`;
+           const element = document.getElementById(elementId);
+           if (element) {
+               element.scrollIntoView({ behavior: "smooth", block: "start" });
+           }
+       }
+
+    }, [entities]);
 
     useEffect(() => {
         setHasMore(total_results - entities.length > 0);

@@ -54,7 +54,7 @@ export const Masonry = ({ photos, loadMore, isLoading, hasMore }: MasonryProps) 
                 <>
                 <div className="masonry">
                     {photos.map((item, index) => (
-                     <div key={item.id + index} className="masonry-item">
+                     <div id={`masonry_${item.id}`} key={item.id + index} className="masonry-item">
                          <Link to={`/photos/${item.id}`}>
                              <img loading="lazy" src={item.src.original} alt={item.alt}/>
                          </Link>
