@@ -6,7 +6,6 @@ import {useCallback, useEffect, useMemo, useState} from "react";
 import debounce from "lodash.debounce";
 import {getMorePhotos, searchPhotos} from "../store/photoSlice.ts";
 import {Masonry} from "../components/masonry/Masonry.tsx";
-import config from "../config";
 
 const MainPage = () => {
     const dispatch = useDispatch<AppDispatch>();
