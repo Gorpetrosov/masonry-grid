@@ -14,7 +14,7 @@ interface Config {
 const config: Config = {
     API_URL: import.meta.env.VITE_PEXELS_API_URL || "https://api.pexels.com/v1",
     API_KEY: import.meta.env.VITE_PEXELS_API_KEY || "eT33h3iFnc6vkZpx32C4LYtPz4yolrc96PLK471F5fVC3phYxStc31y7",
-    PAGINATION: import.meta.env.VITE_PAGINATION_COUNT || 10,
+    PAGINATION: import.meta.env.VITE_PAGINATION_COUNT || 20,
     APP_NAME: import.meta.env.VITE_APP_NAME || "Masonry"
 }
 

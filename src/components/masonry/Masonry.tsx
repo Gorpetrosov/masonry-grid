@@ -27,7 +27,7 @@ export const Masonry = ({ photos, loadMore, isLoading, hasMore }: MasonryProps) 
 
         observerRef.current = new IntersectionObserver(handleObserver, {
             root: null,
-            rootMargin: "250px",
+            rootMargin: "100px",
             threshold: 0.1,
         });
 
