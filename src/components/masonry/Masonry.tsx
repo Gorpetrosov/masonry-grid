@@ -54,7 +54,7 @@ export const Masonry = ({ photos, loadMore, isLoading, hasMore }: MasonryProps) 
                 <>
                 <div className="masonry">
                     {photos.map((item, index) => (
-                        <MasonryItem photo={item} key={item.id + index} />
+                        <MasonryItem photo={item} key={item.id + index.toString()} />
                     ))}
                 </div>
                     <div ref={sentinelRef} className="sentinel" />

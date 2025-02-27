@@ -1,19 +1,35 @@
-import {Photo} from "../interfaces/photo.ts";
 import {Link} from "react-router-dom";
+import {useState} from "react";
+import {Photo} from "../interfaces/photo.ts";
+import Skeleton from "./Skeleton.tsx"; //
 
-
-interface  MasonryItemProps {
-    photo: Photo
+interface MasonryItemProps {
+    photo: Photo;
 }
 
-const MasonryItem = ({photo}: MasonryItemProps) => {
+const MasonryItem = ({ photo }: MasonryItemProps) => {
+    const [isLoading, setIsLoading] = useState(true);
+
+    const handleImageLoad = () => {
+        setIsLoading(false);
+    };
+
     return (
-        <div id={`masonry_${photo.id}`} className="masonry-item">
+        <div className="masonry-item">
             <Link to={`/photos/${photo.id}`}>
-                <img loading="lazy" src={photo.src.large} alt={photo.alt}/>
+                {isLoading && (
+                    <Skeleton />
+                )}
+                <img
+                    loading="lazy"
+                    src={photo.src.original}
+                    alt={photo.alt}
+                    onLoad={handleImageLoad} // Trigger when image finishes loading
+                    style={{ opacity: isLoading ? 0 : 1, transition: "opacity 0.3s" }}
+                />
             </Link>
         </div>
-    )
-}
+    );
+};
 
 export default MasonryItem;
