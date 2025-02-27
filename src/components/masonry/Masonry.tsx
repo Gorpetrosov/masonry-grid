@@ -1,7 +1,7 @@
 import { Photo } from "../../interfaces/photo";
-import { Link } from "react-router-dom";
 import "./Masonry.css";
 import {useCallback, useEffect, useRef} from "react";
+import MasonryItem from "../MasonryItem.tsx";
 
 export interface MasonryProps {
     photos: Photo[];
@@ -54,11 +54,7 @@ export const Masonry = ({ photos, loadMore, isLoading, hasMore }: MasonryProps) 
                 <>
                 <div className="masonry">
                     {photos.map((item, index) => (
-                     <div id={`masonry_${item.id}`} key={item.id + index} className="masonry-item">
-                         <Link to={`/photos/${item.id}`}>
-                             <img loading="lazy" src={item.src.original} alt={item.alt}/>
-                         </Link>
-                     </div>
+                        <MasonryItem photo={item} key={item.id + index} />
                     ))}
                 </div>
                     <div ref={sentinelRef} className="sentinel" />

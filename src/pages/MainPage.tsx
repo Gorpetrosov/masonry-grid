@@ -24,7 +24,6 @@ const MainPage = () => {
     useEffect(() => {
        const previewImageIndex = entities.length - (Number(config.PAGINATION) + 15);
        if(previewImageIndex > 0) {
-           console.log({previewImageIndex})
            const previewImageId = entities[previewImageIndex]?.id;
            const elementId = `masonry_${previewImageId}`;
            const element = document.getElementById(elementId);

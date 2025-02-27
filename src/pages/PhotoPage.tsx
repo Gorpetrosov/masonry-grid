@@ -7,6 +7,7 @@ import { useEffect, useMemo } from "react";
 import "./PhotoPage.css";
 import NotFoundPage from "./404/NotFoundPage.tsx";
 import { Photo } from "../interfaces/photo.ts";
+import Article from "../components/Article.tsx";
 
 const PhotoPage = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -32,19 +33,7 @@ const PhotoPage = () => {
                     <section className="cart container" id="cart">
                         <h3 className="text-medium font-medium center">{photo.alt}</h3>
                         <div className="cart-wrapper">
-                            <article className="cart-content">
-                                <div className="cart-image">
-                                    <img src={photo.src.original} alt={photo.alt} />
-                                </div>
-                                <div className="cart-detail">
-                                    <h3 className="text-base font-semi">Photographer {photo.photographer}</h3>
-                                    <Link className="custom-link" target="_blank" to={photo.photographer_url}>
-                                        Link to {photo.photographer}'s page
-                                    </Link>
-                                    <p>Original Width: {photo.width} px</p>
-                                    <p>Original Height: {photo.height} px</p>
-                                </div>
-                            </article>
+                            <Article photo={photo} />
                         </div>
                         <div className="cart-checkout">
                             <Link className="custom-link" to="/">Main Page</Link>
