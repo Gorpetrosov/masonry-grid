@@ -24,7 +24,7 @@ const MasonryItem = ({ photo }: MasonryItemProps) => {
                     loading="lazy"
                     src={photo.src.original}
                     alt={photo.alt}
-                    onLoad={handleImageLoad} // Trigger when image finishes loading
+                    onLoad={handleImageLoad}
                     style={{ opacity: isLoading ? 0 : 1, transition: "opacity 0.3s" }}
                 />
             </Link>

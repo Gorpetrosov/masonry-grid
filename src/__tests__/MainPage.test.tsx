@@ -2,8 +2,8 @@ import { render } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 import { BrowserRouter } from 'react-router-dom'
-import MainPage from '../pages/MainPage'
-import photosReducer from '../store/photoSlice'
+import MainPage from '../pages/MainPage.tsx'
+import photosReducer from '../store/photoSlice.ts'
 import { vi } from 'vitest';
 
 vi.mock('../components/masonry/Masonry.tsx', () => ({

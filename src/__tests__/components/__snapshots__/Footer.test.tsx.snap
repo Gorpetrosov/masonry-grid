@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Footer Component > matches snapshot 1`] = `
+<div>
+  <footer
+    class="layout-footer"
+  >
+    <p>
+      © 
+      2025
+       
+      Masonry APP
+    </p>
+  </footer>
+</div>
+`;

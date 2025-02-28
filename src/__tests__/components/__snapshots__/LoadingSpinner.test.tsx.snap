@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LoadingSpinner Component > matches snapshot when hidden 1`] = `
+<div>
+  <div
+    class="spinner-container "
+  >
+    <div
+      class="spinner-icon"
+      data-testid="spinner-icon"
+      style="font-size: 40px; color: rgb(237, 43, 43);"
+    />
+  </div>
+</div>
+`;
+
+exports[`LoadingSpinner Component > matches snapshot when visible 1`] = `
+<div>
+  <div
+    class="spinner-container spinner-flex"
+  >
+    <div
+      class="spinner-icon"
+      data-testid="spinner-icon"
+      style="font-size: 40px; color: rgb(237, 43, 43);"
+    />
+  </div>
+</div>
+`;

@@ -2,9 +2,9 @@ import { render } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 import {BrowserRouter, useParams} from 'react-router-dom'
-import PhotoPage from '../pages/PhotoPage'
-import photosReducer, { fetchPhoto } from '../store/photoSlice' // Added fetchPhoto import
-import type { Photo } from '../interfaces/photo'
+import PhotoPage from '../pages/PhotoPage.tsx'
+import photosReducer, { fetchPhoto } from '../store/photoSlice.ts' // Added fetchPhoto import
+import type { Photo } from '../interfaces/photo.ts'
 import { vi } from 'vitest'
 import {ReactNode} from "react";
 
@@ -26,7 +26,7 @@ vi.mock('react-router-dom', async (importOriginal) => ({
 }))
 
 vi.mock('../store/photoSlice', async (importOriginal) => {
-    const actual = await importOriginal<typeof import('../store/photoSlice')>();
+    const actual = await importOriginal<typeof import('../store/photoSlice.ts')>();
     return {
         ...actual,
         fetchPhoto: vi.fn((id: number) => ({

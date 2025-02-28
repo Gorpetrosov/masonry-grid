@@ -61,7 +61,6 @@ const MainPage = () => {
        setCurrentQuery(query.trim());
     },[])
 
-    // Cleanup debounce on unmount
     useEffect(() => {
         return () => {
             debouncedSearch.cancel();

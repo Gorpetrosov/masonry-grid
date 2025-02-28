@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import config from '../../config';
 import './Navbar.css';
-import {SearchForm} from "../SearchForm.tsx";
+import SearchForm from "../SearchForm.tsx";
 
 interface NavbarProps {
     onSearch: (query: string) => void;

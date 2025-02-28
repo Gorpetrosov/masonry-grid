@@ -1,3 +1,4 @@
+import {memo} from "react";
 
 const Header = ( {headerText} : {headerText: string }) => {
     return (
@@ -7,4 +8,4 @@ const Header = ( {headerText} : {headerText: string }) => {
     )
 }
 
-export default Header;
+export default memo(Header);

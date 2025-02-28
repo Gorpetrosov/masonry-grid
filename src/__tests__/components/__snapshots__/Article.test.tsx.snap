@@ -1,0 +1,47 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Article Component > matches snapshot 1`] = `
+<div>
+  <article
+    class="cart-content"
+  >
+    <div
+      class="cart-image"
+    >
+      <img
+        alt="Brown Rocks During Golden Hour"
+        src="test-original.jpg"
+      />
+    </div>
+    <div
+      class="cart-detail"
+    >
+      <h3
+        class="text-base font-semi"
+      >
+        Photographer 
+        John Doe
+      </h3>
+      <a
+        class="custom-link"
+        href="https://example.com"
+        target="_blank"
+      >
+        Link to 
+        John Doe
+        's page
+      </a>
+      <p>
+        Original Width: 
+        1920
+         px
+      </p>
+      <p>
+        Original Height: 
+        1080
+         px
+      </p>
+    </div>
+  </article>
+</div>
+`;

@@ -16,7 +16,7 @@ export interface PhotoState {
     page: number,
 }
 
-const initialState: PhotoState = {
+export const initialState: PhotoState = {
     entities: [],
     loading: false,
     error: null,
@@ -67,7 +67,7 @@ export const getMorePhotos = createAsyncThunk(
     }
 );
 
-const photoSlice = createSlice({
+export const photoSlice = createSlice({
     name: 'photos',
     initialState,
     reducers: {},

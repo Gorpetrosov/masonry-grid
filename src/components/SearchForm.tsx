@@ -6,7 +6,7 @@ interface SearchFormProps {
     onInputUpdate: (query: string) => void;
 }
 
-export const SearchForm = ({ onSearch, isDisabled, onInputUpdate }: SearchFormProps) => {
+const SearchForm = ({ onSearch, isDisabled, onInputUpdate }: SearchFormProps) => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const handleInputChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
@@ -54,3 +54,5 @@ export const SearchForm = ({ onSearch, isDisabled, onInputUpdate }: SearchFormPr
         </form>
     );
 };
+
+export default SearchForm;

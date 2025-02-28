@@ -2,7 +2,7 @@ import {memo} from "react";
 import {FaImage} from "react-icons/fa";
 
 
-const Skeleton = memo(() => {
+const Skeleton = () => {
     return (
         <div
             className="skeleton"
@@ -20,6 +20,6 @@ const Skeleton = memo(() => {
             <FaImage size={40} color="#666" />
         </div>
     )
-})
+}
 
-export default Skeleton;
+export default memo(Skeleton);
